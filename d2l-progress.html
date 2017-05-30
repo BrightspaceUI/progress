@@ -1,0 +1,52 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<style is="custom-style">
+	html {
+
+		--d2l-progress: {
+			appearance: none;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			background-color: var(--d2l-color-woolonardo);
+			border: 1px solid var(--d2l-color-gypsum);
+			border-radius: 10px;
+		};
+
+		/* this is necessary to avoid white bleed over rounded corners in chrome and safari */
+		--d2l-progress-webkit-progress-bar: {
+			background-color: transparent;
+		};
+
+		/* strangely, comma separating the selectors for these pseudo-elements causes them to break */
+		--d2l-progress-webkit-progress-value: {
+			background-color: var(--d2l-color-olivine);
+			border: 1px solid transparent;
+			border-radius: 10px;
+			transition: width 0.75s ease-out;
+		};
+
+		/* note: unable to get firefox to animate the width... seems animation is not implemented for progress in FF */
+		--d2l-progress-moz-progress-bar: {
+			background-color: var(--d2l-color-olivine);
+			border: 1px solid transparent;
+			border-radius: 10px;
+			transition: width 0.75s ease-out;
+		};
+
+		--d2l-progress-ms-fill: {
+			background-color: var(--d2l-color-olivine);
+			border: 1px solid transparent;
+			border-radius: 10px;
+			transition: width 0.75s ease-out;
+		};
+
+		/* these are necessary to avoid showing border when value is 0 */
+		--d2l-progress-webkit-progress-value-no-progress: {
+			border: none;
+		};
+		--d2l-progress-moz-progress-bar-no-progress: {
+			border: none;
+		};
+
+	}
+</style>
