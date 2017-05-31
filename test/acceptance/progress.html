@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Progress</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<script src="../../../webcomponentsjs/webcomponents-lite.min.js"></script>
+		<link rel="import" href="../../d2l-progress.html">
+		<custom-style>
+			<style is="custom-style">
+				progress.d2l-progress {
+					@apply --d2l-progress;
+				}
+				progress.d2l-progress::-webkit-progress-bar {
+					@apply --d2l-progress-webkit-progress-bar;
+				}
+				progress.d2l-progress::-webkit-progress-value {
+					@apply --d2l-progress-webkit-progress-value;
+				}
+				progress.d2l-progress::-moz-progress-bar {
+					@apply --d2l-progress-moz-progress-bar;
+				}
+				progress.d2l-progress::-ms-fill {
+					@apply --d2l-progress-ms-fill;
+				}
+				progress[value="0"].d2l-progress::-webkit-progress-value {
+					@apply --d2l-progress-webkit-progress-value-no-progress;
+				}
+				progress[value="0"].d2l-progress::-moz-progress-bar {
+					@apply --d2l-progress-moz-progress-bar-no-progress;
+				}
+			</style>
+		</custom-style>
+	</head>
+	<body unresolved>
+
+		<div>
+			<progress class="d2l-progress" style="width:400px;" value="0" max="100"></progress>
+		</div>
+		<div>
+			<progress class="d2l-progress" style="width:400px;" value="33" max="100"></progress>
+		</div>
+		<div>
+			<progress class="d2l-progress" style="width:400px;" value="66" max="100"></progress>
+		</div>
+		<div>
+			<progress class="d2l-progress" style="width:400px;" value="100" max="100"></progress>
+		</div>
+
+	</body>
+</html>

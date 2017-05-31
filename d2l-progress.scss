@@ -1,5 +1,47 @@
 @import 'bower_components/d2l-colors/d2l-colors.scss';
 
+@mixin _d2l-progress-fill() {
+	background-color: $d2l-color-olivine;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: width 0.75s ease-out;
+}
+
+@mixin _d2l-progress-no-progress() {
+	border: none;
+}
+
 @mixin d2l-progress() {
+
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: $d2l-color-woolonardo;
+	border: 1px solid $d2l-color-gypsum;
+	border-radius: 10px;
+
+	&::-webkit-progress-bar {
+		background-color: transparent;
+	}
+
+	&::-webkit-progress-value {
+		@include _d2l-progress-fill();
+	}
+
+	&::-moz-progress-bar {
+		@include _d2l-progress-fill();
+	}
+
+	&::-ms-fill {
+		@include _d2l-progress-fill();
+	}
+
+	&[value="0"]::-webkit-progress-value {
+		@include  _d2l-progress-no-progress();
+	}
+
+	&[value="0"]::-moz-progress-bar {
+		@include  _d2l-progress-no-progress();
+	}
 
 }
