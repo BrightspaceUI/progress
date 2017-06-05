@@ -17,9 +17,22 @@
   ],
   "dependencies": {
     "d2l-colors": "^2.2.3",
-    "polymer": "^1.7.0"
+    "polymer": "Polymer/polymer#^1.9.1 || ^2.0.0"
   },
   "devDependencies": {
-    "d2l-demo-template": "~0.0.12"
+    "d2l-demo-template": "~0.0.12",
+	"webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0 || ^1.0.0"
+  },
+   "variants": {
+    "1.x": {
+      "dependencies": {
+	   "d2l-colors": "^2.2.3",
+        "polymer": "Polymer/polymer#^1.0.0"
+      },
+      "devDependencies": {
+		"d2l-demo-template": "~0.0.12",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+      }
+    }
   }
 }
