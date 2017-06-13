@@ -31,6 +31,6 @@
     "eslint-config-brightspace": "^0.2.4",
     "eslint-plugin-html": "^1.5.3",
     "node-sass": "^4.5.3",
-    "polymer-cli": "^0.17.0"
+    "polymer-cli": "^1.1.0"
   }
 }
