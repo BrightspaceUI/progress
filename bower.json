@@ -16,23 +16,30 @@
     "wct.conf.json"
   ],
   "dependencies": {
-    "d2l-colors": "^2.2.3",
+    "d2l-colors": "^2.2.3 || ^3.0.0",
     "polymer": "Polymer/polymer#^1.9.1 || ^2.0.0"
   },
   "devDependencies": {
-    "d2l-demo-template": "~0.0.12",
-	"webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0 || ^1.0.0"
+    "d2l-demo-template": "^1.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0 || ^1.0.0"
   },
-   "variants": {
+  "variants": {
     "1.x": {
       "dependencies": {
-	   "d2l-colors": "^2.2.3",
+        "d2l-colors": "^2.2.3",
         "polymer": "Polymer/polymer#^1.0.0"
       },
       "devDependencies": {
-		"d2l-demo-template": "~0.0.12",
+        "d2l-demo-template": "^1.0.0",
         "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
-      }
+      },
+	  "resolutions": {
+		"webcomponentsjs": "^v0.7.0"
+	  }
     }
+  },
+  "resolutions": {
+    "webcomponentsjs": "^v1.0.0",
+	"polymer": "^2.0.0"
   }
 }
