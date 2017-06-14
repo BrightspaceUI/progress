@@ -16,10 +16,7 @@ bower install d2l-progress
 
 ## Progress Styles
 
-Coming soon!
-
-
-
+![screenshot of progress bar](/screenshots/progress.gif?raw=true)
 
 ## Usage
 
