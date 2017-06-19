@@ -1,0 +1,44 @@
+{
+  "name": "d2l-progress",
+  "description": "Polymer and Sass custom styles/mixins for D2L progress element",
+  "main": [
+    "d2l-progress.html",
+    "d2l-progress.scss"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "test",
+    "screenshots",
+    ".editorconfig",
+    ".gitignore",
+    ".travis.yml",
+    "package.json",
+    "wct.conf.json"
+  ],
+  "dependencies": {
+    "d2l-colors": "^2.2.3 || ^3.0.0",
+    "polymer": "Polymer/polymer#^1.9.1 || ^2.0.0"
+  },
+  "devDependencies": {
+    "d2l-demo-template": "^1.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0 || ^1.0.0"
+  },
+  "variants": {
+    "1.x": {
+      "dependencies": {
+        "d2l-colors": "^2.2.3",
+        "polymer": "Polymer/polymer#^1.0.0"
+      },
+      "devDependencies": {
+        "d2l-demo-template": "^1.0.0",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+      },
+	  "resolutions": {
+		"webcomponentsjs": "^v0.7.0"
+	  }
+    }
+  },
+  "resolutions": {
+    "webcomponentsjs": "^v1.0.0"
+  }
+}
