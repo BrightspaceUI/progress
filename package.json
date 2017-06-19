@@ -14,6 +14,7 @@
   "scripts": {
     "postinstall": "bower install",
     "build:sass": "node-sass --output-style expanded ./test/acceptance/progress.css.scss ./test/acceptance/progress.css",
+    "galen": "concurrently -k -s first \"polymer serve\" \"galen test progress.test\"",
     "test:lint": "npm run test:lint:wc && npm run test:lint:html",
     "test:lint:html": "eslint *.html",
     "test:lint:wc": "polymer lint -i d2l-progress.html",
@@ -27,6 +28,9 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "bower": "^1.7.7",
+    "concurrently": "^3.4.0",
+    "galenframework": "^2.3.4",
+    "phantomjs-prebuilt": "^2.1.14",
     "eslint": "^3.7.1",
     "eslint-config-brightspace": "^0.2.4",
     "eslint-plugin-html": "^1.5.3",
