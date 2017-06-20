@@ -15,6 +15,7 @@
     "postinstall": "bower install",
     "build:sass": "node-sass --output-style expanded ./test/acceptance/progress.css.scss ./test/acceptance/progress.css",
     "galen": "concurrently -k -s first \"polymer serve\" \"galen test progress.test\"",
+    "pregalen": "npm run build:sass",
     "test:lint": "npm run test:lint:wc && npm run test:lint:html",
     "test:lint:html": "eslint *.html",
     "test:lint:wc": "polymer lint -i d2l-progress.html",

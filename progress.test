@@ -1,0 +1,11 @@
+@@ parameterized
+    | deviceType    | tags      | size      |
+    | Mobile        | mobile    | 320x600   |
+    | Desktop       | desktop   | 1024x768  |
+
+Progress Bar rendered on ${deviceType}
+    http://localhost:8000/components/d2l-progress/test/acceptance/progress.html ${size}
+        check test/acceptance/progress.gspec --include "${tags}"
+
+    http://localhost:8000/components/d2l-progress/test/acceptance/progress-mixins.html ${size}
+        check test/acceptance/progress.gspec --include "${tags}"
