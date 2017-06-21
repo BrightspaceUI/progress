@@ -1,5 +1,5 @@
 @objects
-	progress-bar               progress.d2l-progress
+	progress-bar-*             progress.d2l-progress
 	progress-0                 #progress0
 	progress-33                #progress33
 	progress-66                #progress66
@@ -7,7 +7,7 @@
 
 = Progress class =
     @on desktop
-        progress-bar:
+        progress-bar-*:
         	css border is "0px none rgb\(0, 0, 0\)"
             css border-radius is "10px"
             css height is "16px"
