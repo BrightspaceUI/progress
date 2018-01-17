@@ -1,6 +1,5 @@
 {
   "name": "d2l-progress",
-  "version": "0.0.1",
   "private": true,
   "description": "Polymer and Sass custom styles/mixins for D2L progress element",
   "keywords": [
@@ -12,14 +11,10 @@
     "web component"
   ],
   "scripts": {
-    "postinstall": "bower install",
-    "build:sass": "node-sass --output-style expanded ./test/acceptance/progress.css.scss ./test/acceptance/progress.css",
-    "galen": "concurrently -k -s first \"polymer serve\" \"galen test progress.test\"",
-    "pregalen": "npm run build:sass",
-    "test:lint": "npm run test:lint:wc && npm run test:lint:html",
-    "test:lint:html": "eslint *.html",
-    "test:lint:wc": "polymer lint -i d2l-progress.html",
-    "test": "npm run test:lint && npm run build:sass"
+    "postinstall": "polymer install --variants",
+    "test": "npm run test:lint:js && npm run test:lint:wc",
+    "test:lint:js": "eslint *.html",
+    "test:lint:wc": "polymer lint -i *.html"
   },
   "repository": {
     "type": "git",
@@ -28,14 +23,9 @@
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "devDependencies": {
-    "bower": "^1.7.7",
-    "chromedriver": "^2.30.1",
-    "concurrently": "^3.4.0",
-    "eslint": "^3.7.1",
-    "eslint-config-brightspace": "^0.2.4",
-    "eslint-plugin-html": "^1.5.3",
-    "galenframework": "^2.3.4",
-    "node-sass": "^4.5.3",
-    "polymer-cli": "^1.1.0"
+    "eslint": "^4.15.0",
+    "eslint-config-brightspace": "^0.4.0",
+    "eslint-plugin-html": "^4.0.1",
+    "polymer-cli": "^1.5.7"
   }
 }
