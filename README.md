@@ -1,5 +1,5 @@
 # d2l-progress
-
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/progress)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
