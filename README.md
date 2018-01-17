@@ -32,35 +32,35 @@ Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyf
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="d2l-progress.html">
-		<custom-style>
-			<style is="custom-style">
-				progress.d2l-progress {
-					@apply --d2l-progress;
-				}
-				/* this is necessary to avoid white bleed over rounded corners in chrome and safari */
-				progress.d2l-progress::-webkit-progress-bar {
-					@apply --d2l-progress-webkit-progress-bar;
-				}
-				/* strangely, comma separating the selectors for these pseudo-elements causes them to break */
-				progress.d2l-progress::-webkit-progress-value {
-					@apply --d2l-progress-webkit-progress-value;
-				}
-				/* note: unable to get firefox to animate the width... seems animation is not implemented for progress in FF */
-				progress.d2l-progress::-moz-progress-bar {
-					@apply --d2l-progress-moz-progress-bar;
-				}
-				progress.d2l-progress::-ms-fill {
-					@apply --d2l-progress-ms-fill;
-				}
-				/* these are necessary to avoid showing border when value is 0 */
-				progress[value="0"].d2l-progress::-webkit-progress-value {
-					@apply --d2l-progress-webkit-progress-value-no-progress;
-				}
-				progress[value="0"].d2l-progress::-moz-progress-bar {
-					@apply --d2l-progress-moz-progress-bar-no-progress;
-				}
-			</style>
-		</custom-style>
+    <custom-style>
+      <style is="custom-style">
+        progress.d2l-progress {
+          @apply --d2l-progress;
+        }
+        /* this is necessary to avoid white bleed over rounded corners in chrome and safari */
+        progress.d2l-progress::-webkit-progress-bar {
+          @apply --d2l-progress-webkit-progress-bar;
+        }
+        /* strangely, comma separating the selectors for these pseudo-elements causes them to break */
+        progress.d2l-progress::-webkit-progress-value {
+          @apply --d2l-progress-webkit-progress-value;
+        }
+        /* note: unable to get firefox to animate the width... seems animation is not implemented for progress in FF */
+        progress.d2l-progress::-moz-progress-bar {
+          @apply --d2l-progress-moz-progress-bar;
+        }
+        progress.d2l-progress::-ms-fill {
+          @apply --d2l-progress-ms-fill;
+        }
+        /* these are necessary to avoid showing border when value is 0 */
+        progress[value="0"].d2l-progress::-webkit-progress-value {
+          @apply --d2l-progress-webkit-progress-value-no-progress;
+        }
+        progress[value="0"].d2l-progress::-moz-progress-bar {
+          @apply --d2l-progress-moz-progress-bar-no-progress;
+        }
+      </style>
+    </custom-style>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
