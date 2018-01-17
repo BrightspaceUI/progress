@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<title>d2l-progress demo</title>
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+		<link rel="import" href="../../d2l-typography/d2l-typography.html">
+		<link rel="import" href="../d2l-progress.html">
+		<custom-style>
+			<style is="custom-style" include="demo-pages-shared-styles"></style>
+		</custom-style>
+		<custom-style include="d2l-typography">
+			<style is="custom-style" include="d2l-typography"></style>
+		</custom-style>
+		<custom-style>
+			<style is="custom-style">
+				progress.d2l-progress {
+					@apply --d2l-progress;
+				}
+				/* this is necessary to avoid white bleed over rounded corners in chrome and safari */
+				progress.d2l-progress::-webkit-progress-bar {
+					@apply --d2l-progress-webkit-progress-bar;
+				}
+				/* strangely, comma separating the selectors for these pseudo-elements causes them to break */
+				progress.d2l-progress::-webkit-progress-value {
+					@apply --d2l-progress-webkit-progress-value;
+				}
+				/* note: unable to get firefox to animate the width... seems animation is not implemented for progress in FF */
+				progress.d2l-progress::-moz-progress-bar {
+					@apply --d2l-progress-moz-progress-bar;
+				}
+				progress.d2l-progress::-ms-fill {
+					@apply --d2l-progress-ms-fill;
+				}
+				/* these are necessary to avoid showing border when value is 0 */
+				progress[value="0"].d2l-progress::-webkit-progress-value {
+					@apply --d2l-progress-webkit-progress-value-no-progress;
+				}
+				progress[value="0"].d2l-progress::-moz-progress-bar {
+					@apply --d2l-progress-moz-progress-bar-no-progress;
+				}
+			</style>
+		</custom-style>
+		<style>
+			html {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body unresolved class="d2l-typography">
+		<div class="vertical-section-container centered">
+
+			<h3>Progress</h3>
+
+			<div style="margin-bottom: 15px;">
+				<label for="progressValue">Value (0 to 100):</label>
+				<input id="progressValue" type="text" value="5">
+			</div>
+
+			<demo-snippet>
+				<template>
+					<progress id="progress" class="d2l-progress" value="5" max="100"></progress>
+				</template>
+			</demo-snippet>
+
+		</div>
+		<script>
+			document.getElementById('progressValue').addEventListener('change', function(e) {
+				document.getElementById('progress').setAttribute('value', e.target.value );
+			});
+		</script>
+	</body>
+</html>
