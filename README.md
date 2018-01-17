@@ -78,7 +78,7 @@ Import the main `d2l-progress.scss` file into your application's Sass. Then call
 @import 'bower_components/d2l-progress/d2l-progress.scss';
 
 progress.my-progress {
-	@include d2l-progress();
+  @include d2l-progress();
 }
 ```
 
