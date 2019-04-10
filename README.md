@@ -3,9 +3,9 @@
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-A set of [Polymer](https://www.polymer-project.org/1.0/) and [Sass](http://sass-lang.com/) mixins for styling native `progress` elements in D2L applications.
+A set of [Polymer](https://www.polymer-project.org/) and [Sass](http://sass-lang.com/) mixins for styling native `progress` elements in D2L applications.
 
-For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com).
+For further information on this and other components, refer to [The Brightspace UI Guide](https://github.com/BrightspaceUI/guide/wiki).
 
 ## Installation
 
