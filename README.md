@@ -1,7 +1,6 @@
 # d2l-progress
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/progress)
-[![Bower version][bower-image]][bower-url]
-[![Build status][ci-image]][ci-url]
+
+![Build status](https://github.com/BrightspaceUI/progress/workflows/CI/badge.svg)
 
 A set of [Polymer](https://www.polymer-project.org/) and [Sass](http://sass-lang.com/) mixins for styling native `progress` elements in D2L applications.
 
@@ -125,4 +124,8 @@ npm test
 
 All version changes should obey [semantic versioning](https://semver.org/) rules.
 
-Include either `[increment major]`, `[increment minor]` or `[increment patch]` in your merge commit message to automatically increment the `package.json` version and create a tag during the next build.
+Releases use the [semantic-release](https://semantic-release.gitbook.io/) tooling and the [angular preset](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) for commit message syntax. Upon release, the version in `package.json` is updated, a tag and GitHub release is created and a new package will be deployed to NPM.
+
+Commits prefixed with `feat` will trigger a minor release, while `fix` or `perf` will trigger a patch release. A commit containing `BREAKING CHANGE` will cause a major release to occur.
+
+Other useful prefixes that will not trigger a release: `build`, `ci`, `docs`, `refactor`, `style` and `test`. More details in the [Angular Contribution Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type).
