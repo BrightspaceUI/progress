@@ -1,7 +1,5 @@
 # d2l-progress
 
-![Build status](https://github.com/BrightspaceUI/progress/workflows/CI/badge.svg)
-
 A set of [Polymer](https://www.polymer-project.org/) and [Sass](http://sass-lang.com/) mixins for styling native `progress` elements in D2L applications.
 
 For further information on this and other components, refer to [The Brightspace UI Guide](https://github.com/BrightspaceUI/guide/wiki).
